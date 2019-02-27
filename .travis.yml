@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t tszala/react-test -f ./Dockerfile.dev ./client
+  - docker build -t tszala/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run tszala/react-test npm test -- --coverage
